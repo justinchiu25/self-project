@@ -7,7 +7,6 @@ public class PlayerMovement : MonoBehaviour
     
     public float moveSpeed;
     
-    
     private bool isMoving;
 
     private Rigidbody2D playerRB;
@@ -42,19 +41,7 @@ public class PlayerMovement : MonoBehaviour
         playerRB.MovePosition(transform.position + input.normalized * moveSpeed * Time.deltaTime);
         isMoving = false;
     }
-   /*IEnumerator Move(Vector3 targetPos)
-    {
-        isMoving = true;
-        
-        while ((targetPos - transform.position).sqrMagnitude > Mathf.Epsilon)
-        {
-            transform.position = Vector3.MoveTowards(transform.position, targetPos, moveSpeed * Time.deltaTime);
-            yield return null;
-        }
+    
 
-        transform.positio    n = targetPos;
-
-        isMoving = false;
-    }*/
 
 }
